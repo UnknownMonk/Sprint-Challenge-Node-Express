@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+-\* I learned about middleware and error handling.
+
 - [ ] Describe Middleware?
+
+-\* Middleware in express is basicaly a function that gets pluged in a route befor the req,res or can be used globaly to perform a certian action.
 
 - [ ] Describe a Resource?
 
+-\* I suppose there are a lot of resources I would ask you to be more specific.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+-\* A 200 or a 201 code indicates success or something was created.
+
 - [ ] How can we partition our application into sub-applications?
+
+-\* By spliting up the routes into seperate files using moduale.export and importing
 
 ## Project Setup
 
