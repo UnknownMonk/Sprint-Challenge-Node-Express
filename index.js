@@ -2,12 +2,14 @@
 
 // code away!
 const express = require('express');
-
+const cors = require('cors');
+const helmet = require('helmet');
 const server = express();
-
 const project = require('./project/projectRoutes');
 const action = require('./action/actionRoutes');
 
+server.use(helmet());
+server.use(cors());
 server.use(express.json());
 
 server.use('/api/action', action);
