@@ -33,7 +33,7 @@ router.post('/', (req, res) => {
     })
     .catch(err => {
       res.status(500).json({
-        error: 'There was an error while saving the post to the database'
+        error: 'Error when handling route '
       });
     });
 });
@@ -60,17 +60,19 @@ router.delete('/:id', (req, res) => {
   const id = req.params.id;
   actionDB
     .remove(id)
-    .then(removePost => {
-      if (removePost) {
-        res.status(200).json(removePost);
+    .then(removeAction => {
+      if (removeAction) {
+        res.status(200).json(removeAction);
       } else {
         res
           .status(404)
-          .json({ message: 'The post with the specified ID does not exist.' });
+          .json({
+            message: 'The action with the specified ID does not exist.'
+          });
       }
     })
     .catch(err => {
-      res.status(500).json({ error: 'The post could not be removed' });
+      res.status(500).json({ error: 'The action could not be removed' });
     });
 });
 
