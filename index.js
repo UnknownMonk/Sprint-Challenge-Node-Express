@@ -11,7 +11,7 @@ const action = require('./action/actionRoutes');
 server.use(express.json());
 
 server.use('/api/action', action);
-// server.use('/api/project', project);
+server.use('/api/project', project);
 
 server.use('/', (req, res) => {
   res.status(200).json('main index route');
